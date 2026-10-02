@@ -1,0 +1,100 @@
+/* =========================================================
+   input.css: the SOURCE file for Tailwind.
+   You edit this file (and the classes in index.html);
+   the build turns it into dist/output.css, which the page loads.
+   ========================================================= */
+
+/* 1. Pull in all of Tailwind (reset + utilities) */
+@import "tailwindcss";
+
+/* 2. Design tokens.
+   Everything in @theme becomes a class automatically:
+     --color-olive      → bg-olive, text-olive, border-olive ...
+     --font-display     → font-display
+     --text-hero        → text-hero (with its own line-height/letter-spacing)
+     --radius-card      → rounded-card
+     --shadow-card      → shadow-card
+     --breakpoint-lg    → the lg: prefix (screens 960px and wider)            */
+@theme {
+  /* Colors */
+  --color-bg: #F7F3EC;          /* warm paper page background */
+  --color-card: #FFFDF9;        /* card surface */
+  --color-ink: #2A2922;         /* main text */
+  --color-olive: #6B7447;       /* accent: buttons, FAB */
+  --color-olive-dark: #4F5733;  /* small link text (better contrast) */
+  --color-blush: #E8B4A0;       /* pills, quote bar, decoration */
+  --color-blush-tint: #FBF1EB;  /* 16% blush on card, for the article card */
+  --color-muted: #5E5B50;       /* secondary text */
+
+  /* Fonts (web font first, then system fallbacks if it fails to load) */
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+
+  /* Fluid type sizes: clamp(smallest, grows-with-screen, largest) */
+  --text-hero: clamp(2.4rem, 5.6vw, 4.6rem);
+  --text-hero--line-height: 1.04;
+  --text-hero--letter-spacing: -0.035em;
+  --text-name: clamp(1.5rem, 2.4vw, 2.1rem);
+  --text-section: clamp(1.9rem, 3vw, 2.4rem);
+  --text-card-lg: clamp(2.2rem, 4vw, 3.2rem);
+  --text-card-md: clamp(1.8rem, 3vw, 2.3rem);
+  --text-quote: clamp(1.5rem, 2.4vw, 2.1rem);
+
+  /* Shapes and shadows */
+  --radius-card: 28px;
+  --shadow-card: 0 1px 2px rgb(42 41 34 / 0.04), 0 8px 24px rgb(42 41 34 / 0.05);
+  --shadow-lift: 0 2px 4px rgb(42 41 34 / 0.05), 0 18px 40px rgb(42 41 34 / 0.10);
+  --shadow-fab: 0 6px 20px rgb(42 41 34 / 0.18), 0 2px 4px rgb(42 41 34 / 0.08);
+
+  /* Page width (used as max-w-page) */
+  --container-page: 1160px;
+
+  /* Breakpoints: sm = 640px (Tailwind default); lg moved to 960px
+     so the 4-column grid kicks in at the same width as the plain-CSS version. */
+  --breakpoint-lg: 60rem;
+
+  /* Popover animation (used as animate-pop-in) */
+  --animate-pop-in: pop-in 0.2s ease-out;
+  @keyframes pop-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* 3. Base styles for plain HTML elements */
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans text-base leading-[1.6] antialiased sm:text-[17px];
+  }
+}
+
+/* 4. Small reusable components.
+   When the SAME group of utilities repeats many times, @apply lets you
+   bundle them into one class name. Use this sparingly: most styling
+   stays as utilities right in the HTML. */
+@layer components {
+  /* Base card: rounded, bordered, shadowed, with a hover lift.
+     motion-safe: only animates for people who haven't asked for reduced motion. */
+  .card {
+    @apply flex flex-col gap-3.5 rounded-card border border-ink/8 bg-card p-7 shadow-card
+           transition duration-250 hover:shadow-lift
+           motion-safe:hover:-translate-y-1 sm:p-8;
+  }
+
+  /* Blush badge: "In progress", "Live site" */
+  .pill {
+    @apply self-start rounded-full bg-blush px-3.5 py-1.5 text-[0.8rem] font-bold text-ink;
+  }
+
+  /* Small uppercase label: "About", "Experience" */
+  .eyebrow {
+    @apply text-[0.78rem] font-bold uppercase tracking-[0.12em] text-olive-dark;
+  }
+
+  /* Underlined olive link with an icon */
+  .card-link {
+    @apply inline-flex items-center gap-1 self-start border-b-2 border-olive-dark/25 font-bold
+           text-olive-dark transition-colors hover:border-olive-dark
+           focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive;
+  }
+}
