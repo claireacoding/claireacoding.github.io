@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Résumé · Claire Gunshanan</title>
+  <meta name="description" content="Résumé of Claire Gunshanan, Knowledge Manager at AHEAD.">
+
+  <!-- Same fonts as index.html: Fraunces (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+
+  <!-- The COMPILED Tailwind file (made by `npm run build`). Commit it! -->
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<!-- print: classes (see the paper card) shrink the type and strip screen-only chrome so it fits on 1–2 pages -->
+<body class="print:bg-white">
+
+  <!-- ===== Top navigation (same as index.html; links point back to the home page) ===== -->
+  <header class="print:hidden">
+    <nav class="mx-auto flex w-[calc(100%-3rem)] max-w-page flex-col items-start gap-3 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-7" aria-label="Main">
+      <a class="font-sans text-[1.9rem] leading-none font-bold tracking-[-0.06em] focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="index.html" aria-label="Claire Gunshanan, home">cg<span class="text-olive">.</span></a>
+      <ul class="flex flex-wrap gap-x-[22px] gap-y-1 text-[0.95rem] font-medium text-muted sm:gap-8">
+        <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="index.html#work">Work</a></li>
+        <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="index.html#words">Words</a></li>
+        <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="index.html#about">About</a></li>
+        <li><a class="text-olive-dark underline decoration-blush decoration-2 underline-offset-[6px] focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="resume.html" aria-current="page">Résumé</a></li>
+        <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top" class="mx-auto w-[calc(100%-2rem)] max-w-[920px] pb-16 sm:w-[calc(100%-3rem)] sm:pb-24 print:w-full print:max-w-none print:pb-0">
+
+    <!-- Screen-only toolbar above the paper -->
+    <div class="mb-4 flex justify-end print:hidden">
+      <button type="button" onclick="window.print()" class="card-link cursor-pointer text-[0.95rem]">Print / save as PDF
+        <!-- Lucide: printer -->
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+      </button>
+    </div>
+
+    <!-- ===== The "paper": cream card with rounded corners and a soft shadow.
+         print: strips the card so the page itself is the paper. ===== -->
+    <article class="rounded-card border border-ink/8 bg-card px-6 py-9 text-[0.95rem] leading-[1.55] shadow-card sm:px-12 sm:py-14 lg:px-16 print:rounded-none print:border-0 print:bg-transparent print:p-0 print:text-[9pt] print:leading-[1.4] print:shadow-none">
+
+      <!-- Header: stacked name + title (left), contact block (right) -->
+      <header class="grid gap-8 pb-8 sm:grid-cols-[1.5fr_1fr] sm:items-end sm:gap-10 sm:pb-10 print:grid-cols-[1.5fr_1fr] print:items-end print:gap-6 print:pb-4">
+        <div>
+          <h1 class="font-display text-[clamp(2.9rem,8vw,4.8rem)] leading-[0.92] font-normal tracking-[0.01em] uppercase print:text-[34pt]">Claire<br>Gunshanan</h1>
+          <p class="mt-4 text-[0.82rem] font-bold tracking-[0.22em] text-olive-dark uppercase sm:text-[0.9rem] print:mt-2 print:text-[8.5pt]">Knowledge Manager</p>
+        </div>
+        <div>
+          <h2 class="font-display text-[1.3rem] leading-none font-medium tracking-[0.14em] uppercase sm:text-[1.45rem] print:text-[12.5pt] mb-4 print:mb-2">Contact</h2>
+          <dl class="space-y-2.5 print:space-y-1">
+            <div><dt class="text-[0.7rem] font-bold tracking-[0.16em] text-olive-dark uppercase print:text-[7pt]">LinkedIn</dt><dd><a class="text-ink hover:text-olive-dark hover:underline" href="https://www.linkedin.com/in/clairecochran" target="_blank" rel="noopener">linkedin.com/in/clairecochran</a></dd></div>
+            <div><dt class="text-[0.7rem] font-bold tracking-[0.16em] text-olive-dark uppercase print:text-[7pt]">Website</dt><dd><a class="text-ink hover:text-olive-dark hover:underline" href="https://claireacoding.github.io" target="_blank" rel="noopener">claireacoding.github.io</a></dd></div>
+            <div><dt class="text-[0.7rem] font-bold tracking-[0.16em] text-olive-dark uppercase print:text-[7pt]">GitHub</dt><dd><a class="text-ink hover:text-olive-dark hover:underline" href="https://github.com/claireacoding" target="_blank" rel="noopener">github.com/claireacoding</a></dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <!-- Profile -->
+      <section class="border-t border-olive/40 py-7 sm:py-8 print:py-3" aria-labelledby="profile-heading">
+        <h2 id="profile-heading" class="font-display text-[1.3rem] leading-none font-medium tracking-[0.14em] uppercase sm:text-[1.45rem] print:text-[12.5pt] mb-3 print:mb-1.5">Profile</h2>
+        <!-- DRAFT summary: Claire to refine -->
+        <p class="max-w-[720px] print:max-w-none">Knowledge Manager at AHEAD, now in-house after years in technology consulting. I make knowledge sharing part of the process, not an afterthought, by building tools that make capture, sharing, and curation part of how work gets done.</p>
+      </section>
+
+      <!-- Education / Skills / Certifications: three columns (one on phones) -->
+      <section class="grid gap-8 border-t border-olive/40 py-7 sm:grid-cols-3 sm:gap-8 sm:py-8 print:grid-cols-3 print:gap-5 print:py-3 print:break-inside-avoid" aria-label="Education, skills, and certifications">
+        <div>
+          <h2 class="font-display text-[1.3rem] leading-none font-medium tracking-[0.14em] uppercase sm:text-[1.45rem] print:text-[12.5pt] mb-3 print:mb-1.5">Education</h2>
+          <p class="text-[0.78rem] font-bold tracking-[0.14em] text-olive-dark uppercase print:text-[7.5pt]">Rensselaer Polytechnic Institute</p>
+          <p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">Troy, NY · May 2014</p>
+          <p class="mt-1.5">Bachelor of Science in Business Management, Minor in Information Technology &amp; Web Sciences</p>
+        </div>
+        <div>
+          <h2 class="font-display text-[1.3rem] leading-none font-medium tracking-[0.14em] uppercase sm:text-[1.45rem] print:text-[12.5pt] mb-3 print:mb-1.5">Skills</h2>
+          <ul class="mt-2 list-disc space-y-1 pl-4 marker:text-olive/60 print:mt-1 print:space-y-0.5 mt-0 print:mt-0">
+              <li class="break-inside-avoid">Knowledge management</li>
+              <li class="break-inside-avoid">Project management</li>
+              <li class="break-inside-avoid">Change management</li>
+              <li class="break-inside-avoid">Stakeholder &amp; client relationship management</li>
+              <li class="break-inside-avoid">Onboarding &amp; mentoring</li>
+              <li class="break-inside-avoid">Agile / SAFe</li>
+              <li class="break-inside-avoid">Information security risk assessment</li>
+              <li class="break-inside-avoid">Security &amp; compliance documentation</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-display text-[1.3rem] leading-none font-medium tracking-[0.14em] uppercase sm:text-[1.45rem] print:text-[12.5pt] mb-3 print:mb-1.5">Certifications</h2>
+          <p class="text-[0.78rem] font-bold tracking-[0.14em] text-olive-dark uppercase print:text-[7.5pt]">Prosci</p>
+          <p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">May 2026</p>
+          <p class="mt-1">Prosci Certified Change Practitioner</p>
+          <p class="mt-3 text-[0.78rem] font-bold tracking-[0.14em] text-olive-dark uppercase print:text-[7.5pt] print:mt-1.5">Scaled Agile, Inc.</p>
+          <p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">May 2022</p>
+          <p class="mt-1">SAFe Product Owner / Product Manager (PO/PM)</p>
+          <p class="mt-4 text-[0.7rem] font-bold tracking-[0.16em] text-olive-dark uppercase print:text-[7pt] print:mt-2">Organizations</p>
+          <p class="mt-1">Project Management Institute, Northeastern Florida Chapter</p>
+          <p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">March 2020 – Present</p>
+        </div>
+      </section>
+
+      <!-- Work experience: two newspaper-style columns (one on phones).
+           Read top-to-bottom, then across; entries can flow into the second column. -->
+      <section class="border-t border-olive/40 pt-7 sm:pt-8 print:pt-3" aria-labelledby="work-heading">
+        <h2 id="work-heading" class="font-display text-[1.3rem] leading-none font-medium tracking-[0.14em] uppercase sm:text-[1.45rem] print:text-[12.5pt] mb-5 print:mb-2">Work Experience</h2>
+        <div class="gap-10 sm:columns-2 print:columns-2 print:gap-6">
+
+          <!-- AHEAD: Knowledge Manager -->
+          <div class="mb-6 print:mb-3">
+            <p class="text-[0.78rem] font-bold tracking-[0.14em] text-olive-dark uppercase print:text-[7.5pt] break-after-avoid">AHEAD · Remote</p>
+            <!-- Descriptor source: https://www.ahead.com/story/ -->
+            <p class="mb-2 text-[0.85rem] text-muted break-after-avoid print:mb-1 print:text-[8pt]">Engineering-led consulting and managed services across cloud, cybersecurity, data, AI, infrastructure, and operations.</p>
+            <div class="break-inside-avoid break-after-avoid"><p class="font-bold text-ink">Knowledge Manager</p><p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">January 2026 – Present</p></div>
+            <!-- DRAFT bullets: Claire to refine -->
+            <ul class="mt-2 list-disc space-y-1 pl-4 marker:text-olive/60 print:mt-1 print:space-y-0.5">
+              <li class="break-inside-avoid">Build tools that help the business manage day-to-day work and find the information they need to do their jobs, faster</li>
+              <li class="break-inside-avoid">Building a smart intake form that gathers the right details up front, so teams spend less time chasing information</li>
+              <li class="break-inside-avoid">Capture lessons learned, solution patterns, and project knowledge from delivery teams as part of the engagement lifecycle</li>
+              <li class="break-inside-avoid">Build and maintain a reusable library of delivery assets and IP so teams can find and build on proven work</li>
+              <li class="break-inside-avoid">Define taxonomy, metadata standards, and content governance to keep knowledge accurate, current, and easy to find</li>
+              <li class="break-inside-avoid">Make knowledge AI-ready: structured, searchable, and trustworthy for enterprise AI tools; authored AHEAD's article "Knowledge as Infrastructure: The Missing Link in Enterprise AI"</li>
+              <li class="break-inside-avoid">Support onboarding and communities of practice that connect people with the knowledge and experts they need</li>
+              <li class="break-inside-avoid">Track adoption and usage to guide improvements to knowledge tools and processes</li>
+            </ul>
+            <!-- /DRAFT bullets -->
+          </div>
+
+          <!-- AHEAD: consulting titles grouped, then shared bullets -->
+          <div class="-mt-2 mb-6 print:mb-3">
+            <div class="mt-1 space-y-1.5 print:space-y-0.5">
+              <div class="break-inside-avoid break-after-avoid"><p class="font-bold text-ink">Senior Consultant</p><p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">February 2023 – January 2026</p></div>
+              <div class="break-inside-avoid break-after-avoid"><p class="font-bold text-ink">Advisory Consultant</p><p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">December 2020 – February 2023</p></div>
+              <div class="break-inside-avoid break-after-avoid"><p class="font-bold text-ink">Technical Architect – Security</p><p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">December 2019 – December 2020</p></div>
+            </div>
+            <ul class="mt-2 list-disc space-y-1 pl-4 marker:text-olive/60 print:mt-1 print:space-y-0.5">
+              <!-- DRAFT wording (Senior Consultant scope): Claire to refine -->
+              <li class="break-inside-avoid">Managed projects end to end, from sales handoff through closure</li>
+              <li class="break-inside-avoid">Owned project budgets and resolved client escalations</li>
+              <li class="break-inside-avoid">Built and maintained strong client relationships across engagements</li>
+              <!-- /DRAFT wording -->
+              <li class="break-inside-avoid">Led and coordinated large-scale projects in application development, information security, and data migration</li>
+              <li class="break-inside-avoid">Collaborated with cross-functional teams to keep multiple complex engagements consistent and aligned</li>
+              <li class="break-inside-avoid">Drove standardization and fostered camaraderie across AHEAD practices by drawing on input from peers and team members</li>
+              <li class="break-inside-avoid">Founded and served as Advisor for an internal AHEAD community, promoting collaboration and engagement around AHEAD's product and service offerings</li>
+              <li class="break-inside-avoid">Managed development of comprehensive collateral guiding technical resources through the project lifecycle, improving efficiency, standardization, and knowledge sharing</li>
+              <li class="break-inside-avoid">Frequently appointed "Onboarding Buddy" or Advisor for new hires, from experienced professionals to recent college graduates</li>
+              <li class="break-inside-avoid">Mentored and coached junior resources in consulting fundamentals: soft skills, time management, and impactful client interaction</li>
+            </ul>
+          </div>
+
+          <!-- Deloitte -->
+          <div class="mb-6 print:mb-0">
+            <p class="text-[0.78rem] font-bold tracking-[0.14em] text-olive-dark uppercase print:text-[7.5pt] break-after-avoid">Deloitte · New York, NY &amp; Atlanta, GA</p>
+            <div class="mt-1 space-y-1.5 print:space-y-0.5">
+              <div class="break-inside-avoid break-after-avoid"><p class="font-bold text-ink">Senior Consultant</p><p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">September 2017 – December 2019</p></div>
+              <div class="break-inside-avoid break-after-avoid"><p class="font-bold text-ink">Consultant</p><p class="text-[0.85rem] text-muted italic print:text-[8.5pt]">September 2014 – September 2017</p></div>
+            </div>
+            <ul class="mt-2 list-disc space-y-1 pl-4 marker:text-olive/60 print:mt-1 print:space-y-0.5">
+              <li class="break-inside-avoid">Conducted over 20 information security risk assessments for state government clients</li>
+              <li class="break-inside-avoid">Participated in requirements validation and design sessions, presenting tailored solutions to client teams</li>
+              <li class="break-inside-avoid">Drove development and maintenance of critical security and compliance documentation</li>
+              <li class="break-inside-avoid">Developed and managed internal and external status reports across multiple projects and work streams, with clear communication, risk identification, and issue resolution</li>
+              <li class="break-inside-avoid">Consistently earned above-average performance reviews for high-quality results and productive client relationships</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="mx-auto w-[calc(100%-3rem)] max-w-page border-t border-ink/8 pt-8 pb-[104px] text-[0.9rem] text-muted sm:pb-12 print:hidden">
+    <p>© 2026 Claire Gunshanan · <a class="font-medium text-olive-dark hover:underline" href="index.html">Back to portfolio</a></p>
+  </footer>
+
+  <!-- ===== Floating "Say hi" button (same as index.html; email left out for now) ===== -->
+  <details id="contact" class="group fixed right-[18px] bottom-[18px] z-50 sm:right-7 sm:bottom-7 print:hidden">
+    <summary class="flex size-[58px] cursor-pointer list-none items-center justify-center gap-2.5 rounded-full bg-olive font-bold text-card shadow-fab transition select-none hover:bg-olive-dark motion-safe:hover:-translate-y-[3px] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive-dark group-open:bg-olive-dark sm:size-auto sm:py-3.5 sm:pr-[22px] sm:pl-[18px] [&::-webkit-details-marker]:hidden" aria-label="Say hi: show contact links">
+      <svg class="size-[22px] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+      <span class="hidden sm:inline">Say hi</span>
+    </summary>
+    <div class="absolute right-0 bottom-[calc(100%+14px)] w-60 rounded-[22px] border border-ink/8 bg-card px-6 py-[22px] shadow-lift motion-safe:animate-pop-in">
+      <p class="mb-2.5 font-display text-[1.25rem] font-semibold">Say hi</p>
+      <ul>
+        <li>
+          <a class="flex items-center gap-2.5 border-t border-ink/8 py-2.5 font-bold text-olive-dark transition-[padding] hover:pl-1.5 focus-visible:rounded focus-visible:outline-3 focus-visible:outline-olive" href="https://www.linkedin.com/in/clairecochran" target="_blank" rel="noopener">
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+            <svg class="ml-auto size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-2.5 border-t border-ink/8 py-2.5 font-bold text-olive-dark transition-[padding] hover:pl-1.5 focus-visible:rounded focus-visible:outline-3 focus-visible:outline-olive" href="https://github.com/claireacoding" target="_blank" rel="noopener">
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            GitHub
+            <svg class="ml-auto size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- FAB extras (same as index.html): Escape closes it; clicking outside closes it -->
+  <script>
+    const fab = document.getElementById('contact');
+    const fabButton = fab.querySelector('summary');
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && fab.open) { fab.open = false; fabButton.focus(); }
+    });
+    document.addEventListener('click', (event) => {
+      if (fab.open && !fab.contains(event.target)) fab.open = false;
+    });
+  </script>
+
+</body>
+</html>

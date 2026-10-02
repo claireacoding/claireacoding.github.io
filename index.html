@@ -27,7 +27,7 @@
         <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="#work">Work</a></li>
         <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="#words">Words</a></li>
         <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="#about">About</a></li>
-        <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="#resume">Résumé</a></li>
+        <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="resume.html">Résumé</a></li>
         <li><a class="transition-colors hover:text-olive-dark focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -77,9 +77,9 @@
           <h3 class="font-display text-card-md leading-[1.15] font-semibold tracking-[-0.01em]">Résumé</h3>
           <p class="max-w-[480px] text-muted">Knowledge Manager at AHEAD. Governance, taxonomy, and AI-ready knowledge.</p>
           <div class="mt-auto flex flex-wrap gap-x-7 gap-y-3 pt-2">
-            <a class="card-link" href="#">Download PDF
-              <!-- Lucide: download -->
-              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+            <a class="card-link" href="resume.html">View résumé
+              <!-- Lucide: arrow-right -->
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
             <a class="card-link" href="https://www.linkedin.com/in/clairecochran" target="_blank" rel="noopener">View on LinkedIn
               <!-- Lucide: arrow-up-right -->
@@ -251,6 +251,11 @@
         fab.querySelector('ul a').focus();
       });
     });
+
+    // Arriving from another page (e.g. resume.html → index.html#contact): open the popover.
+    if (location.hash === '#contact') {
+      fab.open = true;
+    }
   </script>
 
 </body>

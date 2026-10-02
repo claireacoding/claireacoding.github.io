@@ -7,6 +7,11 @@
 /* 1. Pull in all of Tailwind (reset + utilities) */
 @import "tailwindcss";
 
+/* Pages Tailwind scans for class names (it also auto-detects files in this
+   folder; these lines make sure both pages are always included). */
+@source "./index.html";
+@source "./resume.html";
+
 /* 2. Design tokens.
    Everything in @theme becomes a class automatically:
      --color-olive      → bg-olive, text-olive, border-olive ...
@@ -97,4 +102,9 @@
            text-olive-dark transition-colors hover:border-olive-dark
            focus-visible:rounded focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-olive;
   }
+}
+
+/* 5. Print: page margins for resume.html (the rest is print: utilities in the HTML) */
+@page {
+  margin: 0.55in 0.6in;
 }
