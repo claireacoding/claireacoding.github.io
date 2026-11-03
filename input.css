@@ -8,9 +8,10 @@
 @import "tailwindcss";
 
 /* Pages Tailwind scans for class names (it also auto-detects files in this
-   folder; these lines make sure both pages are always included). */
+   folder; these lines make sure every page is always included). */
 @source "./index.html";
 @source "./resume.html";
+@source "./lately.html";
 
 /* 2. Design tokens.
    Everything in @theme becomes a class automatically:
