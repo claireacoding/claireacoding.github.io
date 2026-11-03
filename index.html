@@ -144,8 +144,8 @@
         <p class="text-[1.05rem] text-muted">Things I build for fun and practice, off the clock.</p>
       </div>
 
-      <!-- 2fr 1fr: the project card is twice as wide as the placeholder -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-[2fr_1fr] sm:gap-5">
+      <!-- Equal columns so each project card matches; the placeholder spans the row below -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
 
         <!-- Daily Affirmations: flatter, with a tiny playful tilt on hover -->
         <article class="card shadow-none motion-safe:hover:-rotate-[0.4deg]">
@@ -161,8 +161,28 @@
           </div>
         </article>
 
+        <!-- Fairway Ledger: same card as Daily Affirmations; code link follows the external card-link pattern -->
+        <article class="card shadow-none motion-safe:hover:-rotate-[0.4deg]">
+          <span class="pill">Live site</span>
+          <h3 class="font-display text-card-md leading-[1.15] font-semibold tracking-[-0.01em]">Fairway Ledger</h3>
+          <p class="max-w-[480px] text-muted">A retro paper scorecard for beginner golfers. Tap to log strokes and lost balls, note your win of the day, and celebrate personal bests. Saves in your browser with a JSON backup.</p>
+          <div class="mt-auto flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-ink/8 pt-6">
+            <div class="flex flex-wrap gap-x-7 gap-y-3">
+              <a class="card-link" href="https://claireacoding.digital/golf-tracker/">Visit site
+                <!-- Lucide: arrow-right -->
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a class="card-link" href="https://github.com/claireacoding/golf-tracker" target="_blank" rel="noopener">View code
+                <!-- Lucide: arrow-up-right -->
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+            </div>
+            <p class="text-[0.85rem] tracking-[0.02em] text-muted">HTML · CSS · JavaScript · localStorage</p>
+          </div>
+        </article>
+
         <!-- Dashed "coming soon" placeholder -->
-        <article class="card min-h-40 items-center justify-center border-2 border-dashed border-olive/35 bg-transparent text-center shadow-none hover:border-olive hover:shadow-none sm:min-h-[220px]" aria-label="Next side quest, coming soon">
+        <article class="card min-h-40 items-center justify-center border-2 border-dashed border-olive/35 bg-transparent text-center shadow-none hover:border-olive hover:shadow-none sm:col-span-2 sm:min-h-[220px]" aria-label="Next side quest, coming soon">
           <span class="grid size-12 place-items-center rounded-full border-2 border-dashed border-olive/45 text-olive-dark" aria-hidden="true">
             <!-- Lucide: plus -->
             <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
